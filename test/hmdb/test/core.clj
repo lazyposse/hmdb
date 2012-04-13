@@ -1,0 +1,6 @@
+(ns hmdb.test.core
+  (:use [hmdb.core])
+  (:use [clojure.test]))
+
+(deftest replace-me ;; FIXME: write
+  (is false "No tests have been written."))
