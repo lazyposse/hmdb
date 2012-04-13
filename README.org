@@ -1,12 +1,12 @@
-# hmdb
+* hmdb
 
 hmdb
 
-## Usage
+** Usage
 
 FIXME: write
 
-## License
+** License
 
 Copyright (C) 2012 FIXME
 
