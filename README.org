@@ -89,17 +89,3 @@ mvn archetype:generate \
 -DgroupId=my.groupid \
 -DartifactId=mywebapp
 #+END_SRC
-
-#+BEGIN_SRC sh
-An example without a backslah
-#+END_SRC
-
-#+BEGIN_SRC sh
-mvn archetype:generate \
--DarchetypeGroupId=org.cometd.archetypes \
-another example with a backslath \
-and another line
-#+END_SRC
-
-
-
