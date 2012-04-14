@@ -95,6 +95,7 @@ An example without a backslah
 #+END_SRC
 
 #+BEGIN_SRC sh
+mvn archetype:generate \
 another example with a backslath \
 and another line
 #+END_SRC
