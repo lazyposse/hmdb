@@ -1,3 +1,5 @@
+*WARN: pre-alpha do not use yet*
+
 * hmdb
 
 hmdb
@@ -6,64 +8,84 @@ hmdb
 
 FIXME: write
 
-** TODO stuff to do [0%]
-
-*** TODO install locally a fixed version of darkStar
-
-
-** how does it work ? 
-
-*** scenario 1
-
-**** You have a normal darkStar
-
-**** You cherry pick (and/or rebase ...) another branch/commit (...), this brings: 
-
-**** bring deps on clj
-
-**** code src for hmdb
-
-**** modification spring for using normal / enhanced dao
-
-
-**** start darkStar
-
-**** then you can choose (a chaud) to use normal dao or enhanced ones
-
-**** you can also connect to the darkStar repl  
-
-
-*** Clj proxy AttrDao, 
-
-*** tell spring to use the proxy  
-
-*** AttrDao
-
-- @Autoried
-
-*** AttrDaoImpl
-
-- @Dao
-
-
-*** scenario 2
-
-**** you have a normal darkStar jars
-
-**** you run a script that patch it (we may use the classpath)
-
-- inject the generated clj dao impl
-
-- intruction that tell spring to use them
-
-**** you have a clj project with darkStar patched as the deps (or classpath)
-
-**** you launch your clj project normally in emacs
-
-**** in the project launch jetty
 
 ** License
 
 Copyright (C) 2012 FIXME
 
 Distributed under the Eclipse Public License, the same as Clojure.
+
+** in-developement section
+
+*** TODO stuff to do [0%]
+
+**** TODO install locally a fixed version of darkStar
+
+*** how does it work ? 
+
+**** scenario 1
+
+***** You have a normal darkStar
+
+***** You cherry pick (and/or rebase ...) another branch/commit (...), this brings: 
+
+***** bring deps on clj
+
+***** code src for hmdb
+
+***** modification spring for using normal / enhanced dao
+
+
+***** start darkStar
+
+***** then you can choose (a chaud) to use normal dao or enhanced ones
+
+***** you can also connect to the darkStar repl  
+
+
+**** Clj proxy AttrDao, 
+
+**** tell spring to use the proxy  
+
+**** AttrDao
+
+- @Autoried
+
+**** AttrDaoImpl
+
+- @Dao
+
+
+**** scenario 2
+
+***** you have a normal darkStar jars
+
+***** you run a script that patch it (we may use the classpath)
+
+- inject the generated clj dao impl
+
+- intruction that tell spring to use them
+
+***** you have a clj project with darkStar patched as the deps (or classpath)
+
+***** you launch your clj project normally in emacs
+
+***** in the project launch jetty
+
+*** toolbox
+
+**** Creating a java webapp to attache to
+
+- Why? We need an existing Java WebApp to attache to.
+
+- How? Using Maven Archetypes: 
+
+*note*: I choose a comet artifact because it's only one I found with an embeded jetty
+
+#+BEGIN_SRC sh
+mvn archetype:generate \
+-DarchetypeGroupId=org.cometd.archetypes \
+-DarchetypeArtifactId=cometd-archetype-jquery-jetty6 \
+-DgroupId=my.groupid \
+-DartifactId=mywebapp
+#+END_SRC
