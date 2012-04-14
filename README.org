@@ -90,4 +90,13 @@ mvn archetype:generate \
 -DartifactId=mywebapp
 #+END_SRC
 
+#+BEGIN_SRC sh
+An example without a backslah
+#+END_SRC
+
+#+BEGIN_SRC sh
+another example with a backslath \
+#+END_SRC
+
+
 
