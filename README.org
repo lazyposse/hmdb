@@ -82,12 +82,12 @@ Distributed under the Eclipse Public License, the same as Clojure.
 
 *note*: I choose a comet artifact because it's only one I found with an embeded jetty
 
-#+begin_src sh
+#+BEGIN_SRC sh
 mvn archetype:generate \
 -DarchetypeGroupId=org.cometd.archetypes \
 -DarchetypeArtifactId=cometd-archetype-jquery-jetty6 \
 -DgroupId=my.groupid \
 -DartifactId=mywebapp
-#+end_src
+#+END_SRC
 
 
